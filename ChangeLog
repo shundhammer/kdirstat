@@ -1,0 +1,215 @@
+2001-09-26 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* committed Makefile.am from kdirstat-1-7-10-devel
+
+2001-09-26 Alexander Rawass <alexannika@users.sourceforge.net>
+	
+	* debugging output in kparts
+	
+2001-09-25 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* added files kdirstat_{part,factory}.{cpp,h,rc}
+	* trying to make a kpart of kdirstat
+	* libtool does not work for me yet
+
+2001-08-20 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* modified configure.in.in to test for libqtreemap
+	  test may not working on some/most systems
+	
+2001-08-18 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* V1.7.8-devel
+	* added kdirstat.spec (to build rpms)
+	* released kdirstat-1.7.8-1.i386.rpm
+
+2001-08-17 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* removed files q*{cpp,h} from cvs
+	* removed doc/treemaps from cvs
+	* modified configure.in and kdirstat/Makefile.am
+	* QTreeMap is now in it's own cvs qtreemap.sourceforge.net
+
+2001-08-11 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* QTreeMap can write data files for 'HypView',
+	  a hyperbolic tree browser
+	
+2001-08-09 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* changed all size-functions from int to asize/float
+	* qxmltreemap: if a node has got an empty attribute 'size',
+	  the size is calculated recursively
+
+	* new files & classes
+	  qlistviewtreemapwindow.cpp
+	  qlistviewtreemapwindow.h
+	  qlistviewtreemaparea.cpp
+	  qlistviewtreemap.h
+	  qxmltreemapviewer.cpp
+
+	* files q*treemap* are built as a library libqtreemap
+	* new qxmltreemapviewer binary:
+	  stand-alone QT/Xml Treemap Viewer
+	* QTreeMap/QListViewTreeMapArea works fine with KProf
+
+2001-08-09  Stefan Hundhammer  <sh@suse.de>
+
+	* Added "credits" section in about box
+
+2001-08-08  Stefan Hundhammer  <sh@suse.de>
+
+	* Implemented iterator classes: KFileInfoIterator and
+	  KFileInfoSortedIterator  
+	* Added CREDITS file
+
+2001-08-06  Stefan Hundhammer  <sh@suse.de>
+
+	* Fixed segfaults due to bad dot entry cleanup (huh? ;-)  ) that
+	  had caused core dumps after finishing reading small trees
+	
+2001-08-05 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* compiler warnings removed
+	* using List of Objects (instead List of KDirInfo)
+	* Bug: regexps not working in xml-window
+	       selection not working in xml-window
+	* removed dependencies to KDirStat from QTreeMap
+	
+2001-07-29 Alexander Rawass <alexannika@users.sourceforge.net>
+	
+	* load XML working (with memory hole)
+
+2001-07-28 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* new sort of treemap/drawing mode: piemap
+	  added file qtreemaparea_piemap.cpp
+	  will not get checked in until legal problems solved
+	* checkmarks work also for paintmode
+
+	* new options for piemap mode
+	* bitmap can be saved to a file
+	* tree can be saved as xml file
+
+	* new files & classes
+	  qxmltreemapwindow.cpp
+	  qxmltreemapwindow.h
+	  qxmltreemaparea.cpp
+	  qxmltreemap.h
+	  (don't work yet)
+	
+	* new defines for compilation:
+	  HAVE_PIEMAP if you have the piemap source
+	  EXPERIMENTAL if you want to see more options
+	
+2001-07-17 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* user can use keywords instead of numbers for options
+	* checkmarks start working
+	* yet only with drawmode
+
+2001-07-16 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* user can now use regexps or wildcards in config
+	* regexps are now compiled only once at startup
+	* wildcards are working correctly
+	* regexps need 3 /// backslashes in kdirstatrc
+	* Feature: the color list is parsed in alphabetic sort
+
+2001-07-14 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* KDirTreeMapWindow reads out configuration with KConfig
+	* Bug: regexps are not working correctly
+
+2001-07-13 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* user can click on rectangles and select/deselect them
+	* those rectangles are stored in a list and appear
+	  at the bottom of the right-button popupmenu
+	
+2001-07-12 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* user can search for regexp, matches get highlighted
+	* current_dir_display working again
+
+2001-07-11 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* new shading: image (sensible only with squarify)
+	  displays pictures, can be used as picture browser
+	* removed most warnings
+
+2001-07-11 Alexander Rawass <alexannika@users.sourceforge.net>
+	
+	* various bugs fixed in squarified treemaps:
+	  correct end of recursion
+	  using floats rather than ints to prevent miscalc.
+	  should work now????
+	* new hierarchical shadings
+
+	
+2001-07-10 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* implemented squarified treemaps (experimental, buggy)
+	* new file added: qtreemaparea_squarify.cpp
+	* Bug: when zooming in too much, the paintarea takes up too much
+	  memory -> X swaps till death
+
+2001-07-05 Alexander Rawass <alexannika@users.sourceforge.net>
+	
+	* more options and exp. shadings
+	* experimental dynamic shading (not working)
+	* user can watch treemap build up
+	* paintEntry moved to qtreemaparea_paint.cpp
+	* drawTreeMap,drawDuTree,CTM moved to qtreemaparea_recursion.cpp
+	* renamed some of the shadings and
+	* wrote some Documentation how to use Shadings and Options
+
+	
+2001-07-03 Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* QTreeMapWindow is now an abstract class
+	* KDirTreeMapWindow implements makeTreeMapWidget()
+	* experimental hierach. cushion
+	* new menu options (experimental & debugging)
+	* new way to make a border (border_step)
+	* CTM (Cushion Treemap) test routine added (not working yet)
+	* new Bug: I'm getting warnings about wrong RGB parameters,
+		even in flat mode
+	
+
+2001-07-01 Alexander Rawass <alexannika@users.sourceforge.net>
+
+        * QTreeMapArea is now a general abstract class to display hierarchies of any kind (not connected to KDirStat anymore) 
+        * KDirTreeMapArea is the implementation for KDirStat 
+        * new Bug: signals/slot not working correctly 
+        * Bug fixed: crashed when telling kdirstat to display a directory which does not exist 
+	
+
+2001-06-29  Stefan Hundhammer  <sh@suse.de>
+
+	* Moved CVS to SourceForge
+
+2001-06-24  Alexander Rawass <alexannika@users.sourceforge.net>
+
+	* V1.7.6-Devel
+        * Removed Zoom Bug
+        * Removed DM_FILES Bug
+        * Faster shading (dirs are always drawn flat)
+        * New directory coloring (shades of grey)
+        * Options for start direction, border width, draw text
+        * Removed most compiler warnings
+
+2001-06-18  Stefan Hundhammer  <sh@suse.de>
+
+	* V1.7.3-Devel
+	* Applied first treemap patch from 
+	  Alexander Rawass <alexannika@users.sourceforge.net>
+	* Added Alexander Rawass to authors list
+	* Improved treemap repaint behaviour (not perfect yet)
+
+2001-06-17  Stefan Hundhammer  <sh@suse.de>
+
+	* V1.7.2-Alpha
+	* Implemented support for all of KDE's IO protocols (ftp, smb, ...)
+	* Fixed PacMan warnings on premature exit
+
