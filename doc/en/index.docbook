@@ -482,7 +482,7 @@ line below.
 </para>
 
 <para>
-Find the largest rectangles, identify them, ant decide what to do with them:
+Find the largest rectangles, identify them, and decide what to do with them:
 Keep them, delete them, whatever. Use the cleanup actions like in the tree
 view. The right mouse button opens a context menu that contains cleanup actions.
 </para>
